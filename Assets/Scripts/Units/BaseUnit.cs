@@ -23,8 +23,6 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected float _maxHealth = 20f;
     [SerializeField]
-    protected float _moveSpeed = 1f;
-    [SerializeField]
     protected Transform _weaponTransform;
     [SerializeField]
     protected float _coolDown = 1;
@@ -130,6 +128,10 @@ public class BaseUnit : MonoBehaviour
         _currentHealth += restore;
         if (_currentHealth > _maxHealth) _currentHealth = _maxHealth;
     }
+
+    public float GetMaxHealth() => _maxHealth;
+
+    public float GetCurrentHealth() => _currentHealth;
 
     public virtual void Step() { }//Stub
 }

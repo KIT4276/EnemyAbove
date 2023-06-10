@@ -93,9 +93,9 @@ public class Enemy : BaseUnit
         _navMeshAgent.enabled = value;
     }
 
-    public float GetMaxHealth() => _maxHealth;
+    
 
-    public float GetCurrentHealth() => _currentHealth;
+    
 
     public void SetCentralPoint(Vector3 point)
         => _centrePoint = point;

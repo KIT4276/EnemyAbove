@@ -18,6 +18,8 @@ public class Player : BaseUnit
     private PlayersWeapon _playersWeapon;
     [SerializeField]
     private float _delayAfterDeath = 3;
+    [SerializeField]
+    private float _moveSpeed = 1f;
 
     public event SimpleHandle PlayerChangeHealthEvent;
     public event SimpleHandle PlayerAmmoChangeEvent;
@@ -182,14 +184,14 @@ public class Player : BaseUnit
 
     #region GetMethods
 
-    public float GetMaxHealth()
-        => _maxHealth;
+    //public float GetMaxHealth()
+    //    => _maxHealth;
 
     public float GetSpeed()
         => _moveSpeed;
 
-    public float GetCurrentHealth()
-        => _currentHealth;
+    //public float GetCurrentHealth()
+    //    => _currentHealth;
 
     public float GetDelayAfterDeath()
         => _delayAfterDeath;

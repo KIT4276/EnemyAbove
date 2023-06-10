@@ -16,7 +16,7 @@ public class FieldOfView : MonoBehaviour
     //[SerializeField]
     //private GameObject _visionPrefab;
 
-    private Enemy _enemy;
+    private BaseUnit _unit;
 
     //[SerializeField]
     //private VisionCone vision;
@@ -31,7 +31,7 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
-        _enemy = GetComponent<Enemy>();
+        _unit = GetComponent<BaseUnit>();
 
         //vision = GetComponent<VisionCone>();
 
@@ -42,7 +42,7 @@ public class FieldOfView : MonoBehaviour
     {
         WaitForSeconds wait = new WaitForSeconds(_checkDelay);
 
-        while (_enemy.IsAlive)
+        while (_unit.IsAlive)
         {
             yield return wait;
             FieldOfViewCheck();

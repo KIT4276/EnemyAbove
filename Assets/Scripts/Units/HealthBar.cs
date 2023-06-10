@@ -9,13 +9,13 @@ public class HealthBar : MonoBehaviour
     private Vector3 _camera;
 
     [SerializeField]
-    private Enemy _npc;
+    private BaseUnit _npc;
     [SerializeField]
     private Slider _healthBar;
 
     private void Start()
     {
-        _camera = new Vector3(_cameraPoint.GetCameraTransform().position.x, _cameraPoint.GetCameraTransform().position.y + 12,
+        _camera = new Vector3(_cameraPoint.GetCameraTransform().position.x, _cameraPoint.GetCameraTransform().position.y + 13.9f,
             _cameraPoint.GetCameraTransform().position.z);
 
         _healthBar.maxValue = _npc.GetMaxHealth();

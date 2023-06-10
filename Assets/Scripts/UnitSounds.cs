@@ -7,7 +7,6 @@ public class UnitSounds : MonoBehaviour
     [SerializeField]
     protected AudioClip _deathSound;
 
-
     public void PlayShot()
         => AudioSource.PlayClipAtPoint(_shotSound, transform.position);
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -13,13 +12,8 @@ public class FieldOfView : MonoBehaviour
     private float _checkDelay = 0.2f;
     [SerializeField]
     private Transform _eye;
-    //[SerializeField]
-    //private GameObject _visionPrefab;
 
     private BaseUnit _unit;
-
-    //[SerializeField]
-    //private VisionCone vision;
 
     [Inject]
     public Player _player;
@@ -32,9 +26,6 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         _unit = GetComponent<BaseUnit>();
-
-        //vision = GetComponent<VisionCone>();
-
         StartCoroutine(FOVRoutine());
     }
 

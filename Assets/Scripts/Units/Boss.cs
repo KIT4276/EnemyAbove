@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
@@ -8,9 +7,6 @@ public class Boss : BaseUnit
 {
     private bool _isStarted;
     protected FieldOfView _fieldOfView;
-    //protected float _currentHealth;
-    //protected bool _canShot = true;
-    //private bool _isShotPossible = true;
 
     private readonly int CritAttack = Animator.StringToHash("Attack");
 
@@ -136,37 +132,22 @@ public class Boss : BaseUnit
     protected override void Death()
     {
         if (!IsAlive) return;
-        Debug.Log("Start Dead");
         _healthBar.SetActive(false);
         _text.SetActive(true);
         _visCon.SetActive(false);
         _lastArtifact.SetActive(true);
         _navMeshAgent.destination = transform.position;
         base.Death();
-        //StartCoroutine(DeathRoutin());
 
         var t = _deathDelay;
         while (t > 0)
         {
             t -= Time.deltaTime;
-            Debug.Log(t);
         }
-        Debug.Log("Dead");
-        //gameObject.SetActive(false);
-
     }
-
-    //protected IEnumerator DeathRoutin()
-    //{
-    //    yield return new WaitForSeconds(_deathDelay);
-    //    Destroy();
-    //}
 
     public void Destroy()
-    {
-        Debug.Log("Destroy()");
-        gameObject.SetActive(false);
-    }
+        =>gameObject.SetActive(false);
 
     private void OnAttack()
     {

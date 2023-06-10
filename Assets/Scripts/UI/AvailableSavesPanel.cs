@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -23,9 +21,7 @@ public class AvailableSavesPanel : MonoBehaviour
     private SaveSystem _saveSystem;
 
     private void Start()
-    {
-        GetValues();
-    }
+       => GetValues();
 
     public void ChoseName()
     {
@@ -45,7 +41,6 @@ public class AvailableSavesPanel : MonoBehaviour
 
     public void DownloadGame()
     {
-        Debug.Log("DownloadGame");
         _menuSounds.PlayClik();
         _saveSystem.DownloadGame();
     }

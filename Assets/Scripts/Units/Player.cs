@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -185,14 +183,8 @@ public class Player : BaseUnit
 
     #region GetMethods
 
-    //public float GetMaxHealth()
-    //    => _maxHealth;
-
     public float GetSpeed()
         => _moveSpeed;
-
-    //public float GetCurrentHealth()
-    //    => _currentHealth;
 
     public float GetDelayAfterDeath()
         => _delayAfterDeath;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -22,9 +20,7 @@ public class PausePanel : MonoBehaviour
     private SaveSystem _saveSystem;
 
     private void Start()
-    {
-        _menuSounds = GetComponent<MenuSounds>();
-    }
+        => _menuSounds = GetComponent<MenuSounds>();
 
 
     private void Update()

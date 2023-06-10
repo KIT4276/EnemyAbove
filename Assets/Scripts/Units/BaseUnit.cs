@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -129,9 +128,11 @@ public class BaseUnit : MonoBehaviour
         if (_currentHealth > _maxHealth) _currentHealth = _maxHealth;
     }
 
-    public float GetMaxHealth() => _maxHealth;
+    public float GetMaxHealth() 
+        => _maxHealth;
 
-    public float GetCurrentHealth() => _currentHealth;
+    public float GetCurrentHealth() 
+        => _currentHealth;
 
-    public virtual void Step() { }//Stub
+    public virtual void Step() { }
 }

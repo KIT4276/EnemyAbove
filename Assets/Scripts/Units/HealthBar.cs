@@ -4,9 +4,10 @@ using Zenject;
 
 public class HealthBar : MonoBehaviour
 {
+    private Vector3 _camera;
+
     [Inject]
     private CameraPoint _cameraPoint;
-    private Vector3 _camera;
 
     [SerializeField]
     private BaseUnit _npc;
@@ -15,8 +16,6 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
-        //_camera = new Vector3(_cameraPoint.GetCameraTransform().position.x, _cameraPoint.GetCameraTransform().position.y + 13.9f,
-        //    _cameraPoint.GetCameraTransform().position.z);
         _camera = _cameraPoint.GetCameraTransform();
         _healthBar.maxValue = _npc.GetMaxHealth();
     }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +11,6 @@ public class UpgradeTrigger : BaseTrigger
     [SerializeField]
     private AudioClip _actionSound;
 
-
     [Inject]
     private CameraPoint _cameraPoint;
     [Inject]
@@ -21,13 +18,8 @@ public class UpgradeTrigger : BaseTrigger
     [Inject]
     private UpgradeMenu _upgradeMenu;
 
-
-
     private void Start()
-    {
-        _cameraPoint.BringCloserEvent += UpgradeMenuOn;
-
-    }
+        =>_cameraPoint.BringCloserEvent += UpgradeMenuOn;
 
     private void OnTriggerEnter(Collider other)
     {

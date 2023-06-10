@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -22,9 +21,7 @@ public class CameraPoint : MonoBehaviour
         => transform.position = Vector3.Lerp(transform.position, _target.transform.position, _speed * Time.fixedDeltaTime);
 
     public void BringCloser(Vector3 position)
-    {
-        StartCoroutine(BringCloserRoutine(position));
-    }
+        => StartCoroutine(BringCloserRoutine(position));
 
     private IEnumerator BringCloserRoutine(Vector3 position)
     {

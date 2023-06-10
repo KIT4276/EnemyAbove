@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -17,9 +15,12 @@ public class OffText : MonoBehaviour
     }
 
     private void Off(InputAction.CallbackContext obj)
+       => this.gameObject.SetActive(false);
+
+    private void OnDestroy()
     {
         _player.GetControls().PlayerActionMap.Attack.performed -= Off;
         _player.GetControls().PlayerActionMap.WeaponSwitch.performed -= Off;
-        this.gameObject.SetActive(false);
+        _player.GetControls().PlayerActionMap.Move.performed -= Off;
     }
 }

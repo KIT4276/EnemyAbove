@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -192,8 +191,9 @@ public class VisionCone : MonoBehaviour
             bool ishit = Physics.Raycast(new Ray(pos_world, dir_world), out hit, range, obstacle_mask.value);
             if (ishit)
                 dir = dir.normalized * hit.distance;
+#if UNITY_EDITOR
             Debug.DrawRay(pos_world, dir_world * (ishit ? hit.distance : range));
-
+#endif
             vertices.Add(dir);
         }
 
@@ -220,9 +220,9 @@ public class VisionCone : MonoBehaviour
             float tot_dist = ishit ? hit.distance : range + offset;
             Vector3 dir1 = dir.normalized * offset;
             Vector3 dir2 = dir.normalized * Mathf.Max(tot_dist, offset);
-
+# if UNITY_EDITOR
             Debug.DrawRay(pos_world + dir_world * offset, dir_world * Mathf.Max(tot_dist - offset, 0f), Color.blue);
-
+#endif
             vertices.Add(dir1);
             vertices.Add(dir2);
         }

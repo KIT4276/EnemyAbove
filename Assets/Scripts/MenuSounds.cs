@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuSounds : MonoBehaviour
@@ -8,7 +6,5 @@ public class MenuSounds : MonoBehaviour
     private AudioSource _clikSound;
 
     public void PlayClik()
-    {
-        _clikSound.Play();
-    }
+       => _clikSound.Play();
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -40,9 +39,13 @@ public class EnemyWander : Enemy
         Vector3 point;
         if (RandomPoint(_centrePoint, _range, out point))
         {
+#if UNITY_EDITOR
             Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+#endif 
             _navMeshAgent.SetDestination(point);
+#if UNITY_EDITOR
             Debug.DrawLine(transform.position, point, Color.red, 1.0f);
+#endif
         }
     }
 

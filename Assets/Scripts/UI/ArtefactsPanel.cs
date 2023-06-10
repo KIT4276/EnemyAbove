@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -27,7 +25,5 @@ public class ArtefactsPanel : MonoBehaviour
     }
 
     private void OnDestroy()
-    {
-        _artefactsSystem.ChangeArtifactsCountEvent -= ArtifactsUpdate;
-    }
+        => _artefactsSystem.ChangeArtifactsCountEvent -= ArtifactsUpdate;
 }

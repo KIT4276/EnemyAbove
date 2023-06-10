@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
@@ -32,9 +31,7 @@ public class Enemy : BaseUnit
     public event SimpleHandle DeadEnemyEvent;
 
     private void OnEnable()
-    {
-        _sideType = SideType.Enemy;
-    }
+        =>_sideType = SideType.Enemy;
 
     protected override void Death()
     {
@@ -77,7 +74,7 @@ public class Enemy : BaseUnit
 
         if (!_primary)
         {
-            _navMeshAgent.SetDestination(_player.GetPlayersPos());// тут будут проблемы?
+            _navMeshAgent.SetDestination(_player.GetPlayersPos());
         }
 
         IsInPool = false;
@@ -89,13 +86,7 @@ public class Enemy : BaseUnit
     }
 
     public void NavMeshEnabled(bool value)
-    {
-        _navMeshAgent.enabled = value;
-    }
-
-    
-
-    
+        =>_navMeshAgent.enabled = value;
 
     public void SetCentralPoint(Vector3 point)
         => _centrePoint = point;

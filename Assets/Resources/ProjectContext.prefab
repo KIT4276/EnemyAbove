@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &398065780002509442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8154354887803196955}
+  - component: {fileID: 3422006041169650418}
+  - component: {fileID: 2743372566945867718}
+  m_Layer: 0
+  m_Name: ProjectContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8154354887803196955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398065780002509442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3422006041169650418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398065780002509442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e6589720da476459dc6dd71624b071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 2743372566945867718}
+  _installerPrefabs: []
+  _parentNewObjectsUnderContext: 1
+  _editorReflectionBakingCoverageMode: 0
+  _buildsReflectionBakingCoverageMode: 0
+  _settings:
+    _ensureDeterministicDestructionOrderOnApplicationQuit: 0
+    _displayWarningWhenResolvingDuringInstall: 1
+    _validationRootResolveMethod: 0
+    _validationErrorResponse: 0
+    _signalSettings:
+      _defaultSyncMode: 0
+      _missingHandlerDefaultResponse: 2
+      _requireStrictUnsubscribe: 0
+      _defaultAsyncTickPriority: 1
+--- !u!114 &2743372566945867718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398065780002509442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38aefc9ef3fb1424d8637f36b8f86dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPrefab: {fileID: 6743611185036577980, guid: 90fd452573cc7cd4b9c5925165da6c37, type: 3}
+  _cameraPrefab: {fileID: 7032531872543721147, guid: 398dc97e1263367409e747e5f7bb97cc, type: 3}
+  _faderPrefab: {fileID: 313438310383931455, guid: faf60c60de31fb44db83f3189165fcbd, type: 3}
+  _loaderPrefab: {fileID: 8622654823174313049, guid: ae781e522d510cc44ab54b92ae8be46d, type: 3}
+  _artefactsSystemPrefab: {fileID: 3316547389120298260, guid: 3eb7941a58fcb6943bd54b1ad43f7568, type: 3}
+  _dropLootSystemPrefab: {fileID: 8557396942551969461, guid: 9c0c2f7d26b82dc45814cef69050c977, type: 3}
+  _experienceSystemPrefab: {fileID: 1476712995457046760, guid: 7f713ba9572bc8e478d9051771f6ebc0, type: 3}
+  _upgradeSystemPrefab: {fileID: 7009005546021100589, guid: 69eaf4dd9de442446abe73cefd59ca56, type: 3}
+  _upgradeMenuPrefab: {fileID: 4445790161500944974, guid: 62163b9948bcd1c45be1cb4f97f80540, type: 3}
+  _saveSystemPrefab: {fileID: 5623490649664756602, guid: 6365c66a8e21f674cb338c6ed41d97de, type: 3}
+  _projectilePrefab: {fileID: 729454295734639824, guid: df5fbc915c77b6d47bd0c61c2da453a3, type: 3}
+  _enemyPrefab: {fileID: 3106622710679960568, guid: 762dbd63d0bb95a4caf4eb320d58ea6c, type: 3}
+  _lootPrefab: {fileID: 8130675430270748657, guid: c032c9edda3a4374a9ab5c5e21c330fc, type: 3}

@@ -10,6 +10,8 @@ public class CameraPoint : MonoBehaviour
     private float _speed = 2f;
     [SerializeField]
     private float _bringCloserTime = 1;
+    [SerializeField]
+    private Transform _camera; 
 
     [Inject]
     private Player _target;
@@ -31,6 +33,9 @@ public class CameraPoint : MonoBehaviour
         BringCloserEvent?.Invoke();
     }
 
-    public Transform GetCameraTransform()
-        => transform;
+    public Vector3 GetCameraTransform()
+    {
+        if (_camera == null) return Vector3.zero;
+        else return _camera.position;
+    }
 }

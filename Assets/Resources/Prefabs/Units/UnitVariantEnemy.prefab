@@ -186,7 +186,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 686882752757246707}
   m_FillRect: {fileID: 7107209910098929623}
   m_HandleRect: {fileID: 9074264391443090973}
@@ -685,7 +685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 20
-  _moveSpeed: 1
   _weaponTransform: {fileID: 5793896134548239947}
   _coolDown: 2
   _navMeshAgent: {fileID: 8145131721786468949}

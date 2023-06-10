@@ -60,6 +60,7 @@ public class Player : BaseUnit
     {
         _sounds.PlayWeaponSwitch();
         _playersWeapon.WeaponSwitch();
+        _isShotPossible = _weaponClass.GetAbilityToShoot();
     }
 
     public override void SetDamage(float damage)

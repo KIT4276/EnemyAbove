@@ -493,11 +493,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f905f8566ebcc74a974a0c9135bf1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _moveSpeed: 3
+  _maxHealth: 30
   _weaponTransform: {fileID: 4436434642835916358}
   _coolDown: 0.5
   _delayAfterDeath: 2.5
+  _moveSpeed: 3
 --- !u!114 &6863705815100755197
 MonoBehaviour:
   m_ObjectHideFlags: 0

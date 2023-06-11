@@ -200,6 +200,7 @@ public class UpgradeMenu : MonoBehaviour
         _upgradeSystem.UpgradeRateOfFire();
         _upgradeSystem.UpgradeMoveSpeed();
         _upgradeSystem.Upgrade_stockAmmo();
+        UpdateSum();
     }
 
     public void ResetSumm()

@@ -27,6 +27,7 @@ public class AvailableSavesPanel : MonoBehaviour
     {
         _menuSounds.PlayClik();
         _chosenName.text = _playersName.text;
+        Debug.Log("ChoseName");
     }
 
     public void GetValues()
@@ -37,11 +38,13 @@ public class AvailableSavesPanel : MonoBehaviour
         _playersName.text = _saveSystem.PlayersNameValue;
         _lvl.text = data.lvl.ToString();
         _exp.text = data.experience.ToString();
+        Debug.Log("GetValues");
     }
 
     public void DownloadGame()
     {
         _menuSounds.PlayClik();
         _saveSystem.DownloadGame();
+        Debug.Log("DownloadGame");
     }
 }

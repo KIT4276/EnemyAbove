@@ -1703,6 +1703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shotSound: {fileID: 8300000, guid: 8712cd5e707660c478eceebbda2cd4cc, type: 3}
   _deathSound: {fileID: 8300000, guid: 9705018596b22894faf6aa228024734e, type: 3}
+  _critAttackSound: {fileID: 8300000, guid: 20edeaf5b0c8aec448458a525f646985, type: 3}
 --- !u!4 &5977967183115141 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3869391776113338471, guid: d9fb39f7f2f07e74395bd2e843787eec, type: 3}

@@ -512,6 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shotSound: {fileID: 8300000, guid: 8712cd5e707660c478eceebbda2cd4cc, type: 3}
   _deathSound: {fileID: 8300000, guid: d398ad5d63bd4ee4dacabb74a931a0a1, type: 3}
+  _critAttackSound: {fileID: 8300000, guid: 20edeaf5b0c8aec448458a525f646985, type: 3}
   _weaponSwitchSound: {fileID: 8300000, guid: 401281ac8820ed74891fd1f12f386512, type: 3}
   _takeLootSound: {fileID: 8300000, guid: 2a42ccae8ee3f0444b62c947922b41d5, type: 3}
   _takeArtifactSound: {fileID: 8300000, guid: a5a0312ebdd9f384c9f7ba248caeff99, type: 3}

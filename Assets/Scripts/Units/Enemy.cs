@@ -33,11 +33,6 @@ public class Enemy : BaseUnit
     private void OnEnable()
         =>_sideType = SideType.Enemy;
 
-    protected void Update()
-    {
-        
-    }
-
     public void AddCAmera(Vector3 value)
         => _cameraTransform = value;
 

@@ -12374,7 +12374,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1424532116, guid: fbc8131825addb3448e9952de6647410, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.169403
+      value: -7.1694336
       objectReference: {fileID: 0}
     - target: {fileID: 3248550288292491209, guid: fbc8131825addb3448e9952de6647410, type: 3}
       propertyPath: m_Pivot.x
@@ -14955,6 +14955,10 @@ PrefabInstance:
       propertyPath: _lastArtifact
       value: 
       objectReference: {fileID: 106792605}
+    - target: {fileID: 1888258868, guid: d60d349a38ce35246ac46083f3fa3b3a, type: 3}
+      propertyPath: _critAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 20edeaf5b0c8aec448458a525f646985, type: 3}
     - target: {fileID: 211864353235121, guid: d60d349a38ce35246ac46083f3fa3b3a, type: 3}
       propertyPath: m_Name
       value: Boss

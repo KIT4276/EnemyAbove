@@ -111,7 +111,10 @@ public class Boss : BaseUnit
         while (IsAlive)
         {
             if (_fieldOfView.CanSeePlayer)
+            {
                 _animator.SetBool(CritAttack, true);
+                _unitSounds.PlayCritAttach();
+            }
             yield return new WaitForSeconds(_attackPause);
         }
     }

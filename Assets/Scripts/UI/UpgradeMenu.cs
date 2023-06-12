@@ -12,6 +12,11 @@ public class UpgradeMenu : MonoBehaviour
     private float _ultimateSumValue;
     private Color _normColor;
 
+    private bool _rateOfFireSelected;
+    private bool _maxHPSelected;
+    private bool _moveSpeedSelected;
+    private bool _stockAmmoSelected;
+
     [SerializeField]
     private MenuSounds _menuSounds;
     [SerializeField]
@@ -72,6 +77,11 @@ public class UpgradeMenu : MonoBehaviour
         UpdateButtonsText();
         UpdatePrice();
         _player.ShootingBan();
+
+        _stockAmmoSelected = false;
+        _moveSpeedSelected = false;
+        _maxHPSelected = false;
+        _rateOfFireSelected = false;
     }
 
     private void FixedUpdate()
@@ -137,6 +147,7 @@ public class UpgradeMenu : MonoBehaviour
         else
             _rateOfFireSumValue = _upgradeSystem.GetDcrease—oolDownPrace();
 
+        _rateOfFireSelected = true;
         UpdateSum();
     }
 
@@ -149,6 +160,7 @@ public class UpgradeMenu : MonoBehaviour
         else
             _maxHPSumValue = _upgradeSystem.GetIncreaseMaxHPPrace();
 
+        _maxHPSelected = true;
         UpdateSum();
     }
 
@@ -161,6 +173,7 @@ public class UpgradeMenu : MonoBehaviour
         else
             _moveSpeedSumValue = _upgradeSystem.GetMoveSpeedPrace();
 
+        _moveSpeedSelected = true;
         UpdateSum();
     }
 
@@ -173,6 +186,7 @@ public class UpgradeMenu : MonoBehaviour
         else
             _stockAmmoSumValue = _upgradeSystem.GetIncreaseStockAmmoPrace();
 
+        _stockAmmoSelected = true;
         UpdateSum();
     }
 
@@ -199,10 +213,15 @@ public class UpgradeMenu : MonoBehaviour
 
         _experienceText.text = exp.ToString();
 
+        if(_maxHPSelected)
         _upgradeSystem.UpgradeMaxHP();
+        if(_rateOfFireSelected)
         _upgradeSystem.UpgradeRateOfFire();
+        if(_moveSpeedSelected)
         _upgradeSystem.UpgradeMoveSpeed();
+        if(_stockAmmoSelected)
         _upgradeSystem.Upgrade_stockAmmo();
+
         ResetSumm();
     }
 

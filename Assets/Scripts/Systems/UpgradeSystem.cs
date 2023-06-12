@@ -27,16 +27,28 @@ public class UpgradeSystem : MonoBehaviour
     #region UpgradeMethods
 
     public void UpgradeRateOfFire()
-        => _player.DecreaseÑoolDown(_decreaseÑoolDownValue);
+    {     
+        _player.DecreaseÑoolDown(_decreaseÑoolDownValue);
+        Debug.Log("UpgradeRateOfFire");
+    }
 
     public void UpgradeMaxHP()
-        => _player.IncreaseMaxHP(_increaseMaxHP);
+    { 
+        _player.IncreaseMaxHP(_increaseMaxHP);
+        Debug.Log("UpgradeMaxHP");
+    }
 
     public void UpgradeMoveSpeed()
-        => _player.IncreaseMoveSpeed(_increaseMoveSpeed);
+    {         
+        _player.IncreaseMoveSpeed(_increaseMoveSpeed);
+        Debug.Log("UpgradeMoveSpeed");
+    }
 
     public void Upgrade_stockAmmo()
-        => _player.GetComponent<PlayersWeapon>().IncreaseStockAmmo(_increaseStockAmmo);
+    { 
+         _player.GetComponent<PlayersWeapon>().IncreaseStockAmmo(_increaseStockAmmo);
+        Debug.Log("Upgrade_stockAmmo");
+    }
 
     #endregion UpgradeMethods
 

@@ -78,6 +78,11 @@ public class UpgradeMenu : MonoBehaviour
         UpdatePrice();
         _player.ShootingBan();
 
+        Zeroing();
+    }
+
+    private void Zeroing()
+    {
         _stockAmmoSelected = false;
         _moveSpeedSelected = false;
         _maxHPSelected = false;
@@ -222,6 +227,7 @@ public class UpgradeMenu : MonoBehaviour
         if(_stockAmmoSelected)
         _upgradeSystem.Upgrade_stockAmmo();
 
+        Zeroing();
         ResetSumm();
     }
 
@@ -234,6 +240,7 @@ public class UpgradeMenu : MonoBehaviour
         _stockAmmoSumValue = 0;
         _ultimateSumValue = 0;
 
+        Zeroing();
         UpdateSumText();
     }
 

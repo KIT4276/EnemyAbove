@@ -4,8 +4,6 @@ using Zenject;
 
 public class HealthBar : MonoBehaviour
 {
-    private Vector3 _camera;
-
     [Inject]
     private CameraPoint _cameraPoint;
 
@@ -16,13 +14,12 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
-        _camera = _cameraPoint.GetCameraTransform();
         _healthBar.maxValue = _npc.GetMaxHealth();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.LookAt(_camera);
+        transform.LookAt(_cameraPoint.GetCameraTransform());
         _healthBar.value = _npc.GetCurrentHealth();
     }
 }

@@ -6,6 +6,7 @@ using Zenject;
 public class Enemy : BaseUnit
 {
     protected Vector3 _centrePoint;
+    protected Vector3 _cameraTransform;
 
     [SerializeField]
     protected NavMeshAgent _navMeshAgent;
@@ -15,7 +16,6 @@ public class Enemy : BaseUnit
     protected float _deathDelay = 2.5f;
     [SerializeField]
     protected FieldOfView _fieldOfView;
-
 
     [Inject]
     protected EnemiesFactory _enemiesFactory;
@@ -32,6 +32,14 @@ public class Enemy : BaseUnit
 
     private void OnEnable()
         =>_sideType = SideType.Enemy;
+
+    protected void Update()
+    {
+        
+    }
+
+    public void AddCAmera(Vector3 value)
+        => _cameraTransform = value;
 
     protected override void Death()
     {

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class EnemyWander : Enemy
 {
     protected float _distance;
+    
 
     [SerializeField]
     protected float _detectionDistance = 15f;
@@ -15,8 +16,15 @@ public class EnemyWander : Enemy
     [SerializeField]
     private float _maxDistance = 1;
 
+    
+
+
     private void FixedUpdate()
-        => OnMove();
+    { 
+        OnMove();
+    }
+
+    
 
     private void OnMove()
     {

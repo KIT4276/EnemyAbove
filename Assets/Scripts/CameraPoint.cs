@@ -30,9 +30,9 @@ public class CameraPoint : MonoBehaviour
         BringCloserEvent?.Invoke();
     }
 
-    public Vector3 GetCameraTransform()
+    public Transform GetCameraTransform()
     {
-        if (_camera == null) return Vector3.zero;
-        else return _camera.position;
+        if (_camera == null) return transform;
+        else return _camera;
     }
 }

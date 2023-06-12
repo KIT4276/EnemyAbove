@@ -13,6 +13,8 @@ public class EnemiesSpawner : MonoBehaviour
     private EnemiesFactory _enemiesFactory;
     [Inject]
     private LVLLoader _lVLLoader;
+    [Inject]
+    private CameraPoint _cameraPoint;
 
     private void Start()
     {

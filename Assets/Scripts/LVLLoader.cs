@@ -79,20 +79,26 @@ public class LVLLoader : MonoBehaviour
         LoadSceneCompliteEvent?.Invoke(sceneName);
 
 
-        if (sceneName != BetweenLVL && sceneName != SCENE_0)
+        if (sceneName == BetweenLVL || sceneName == SCENE_0 || sceneName == SCENE_5)
         {
-            LoadNextSceneEvent?.Invoke();
-            _player.ShootingPermits();
+            _player.ShootingBan();
+            if(sceneName != BetweenLVL)
+                _player.MovingingBan();
         }
         else
         {
-            _player.ShootingBan();
+            LoadNextSceneEvent?.Invoke();
+            _player.ShootingPermits();
+            _player.MovingingPermits();
         }
 
         async.allowSceneActivation = true;
 
         waitFading = true;
         _fader.FadeOut(() => waitFading = false);
+
+        if (sceneName == SCENE_5)
+            _player.ShootingBan();
 
         while (waitFading)
             yield return null;

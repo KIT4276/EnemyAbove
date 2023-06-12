@@ -28,6 +28,7 @@ public class UpgradeTrigger : BaseTrigger
             AudioSource.PlayClipAtPoint(_actionSound, transform.position);
             _player = other.GetComponent<Player>();
             _cameraPoint.BringCloser(_closerTransform.position);
+            _player.MovingingBan();
         }
     }
 

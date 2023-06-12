@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 public class BetweenLVLFirstTrigger : BaseTrigger
 {
@@ -9,5 +10,6 @@ public class BetweenLVLFirstTrigger : BaseTrigger
     {
         if (other.GetComponent<Player>() != null)
             _betweenLVLCanvas.OpenText();
+            
     }
 }

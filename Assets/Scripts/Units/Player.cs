@@ -175,8 +175,14 @@ public class Player : BaseUnit
     public void ShootingPermits()
         => _isShotPossible = true;
 
+    public void MovingingPermits()
+        => _controls.PlayerActionMap.Enable();
+
     public void ShootingBan()
         => _isShotPossible = false;
+
+    public void MovingingBan()
+        => _controls.PlayerActionMap.Disable();
 
     public void StopAnimation()
         => _animator.enabled = false;

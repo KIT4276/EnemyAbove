@@ -52,6 +52,8 @@ public class UpgradeMenu : MonoBehaviour
     private UpgradeSystem _upgradeSystem;
     [Inject]
     private ExperienceSystem _experienceSystem;
+    [Inject]
+    private Player _player;
 
     private void Start()
     {
@@ -69,6 +71,7 @@ public class UpgradeMenu : MonoBehaviour
         _experienceText.text = _experience.ToString();
         UpdateButtonsText();
         UpdatePrice();
+        _player.ShootingBan();
     }
 
     private void FixedUpdate()
@@ -200,7 +203,7 @@ public class UpgradeMenu : MonoBehaviour
         _upgradeSystem.UpgradeRateOfFire();
         _upgradeSystem.UpgradeMoveSpeed();
         _upgradeSystem.Upgrade_stockAmmo();
-        UpdateSum();
+        ResetSumm();
     }
 
     public void ResetSumm()
@@ -218,6 +221,9 @@ public class UpgradeMenu : MonoBehaviour
     public void CloseUpgradeMenu()
     {
         _menuSounds.PlayClik();
+        //_player.ShootingPermits();
+        ResetSumm();
+        _player.MovingingPermits();
         this.gameObject.SetActive(false);
     }
 

@@ -72,7 +72,7 @@ public class BaseUnit : MonoBehaviour
             _unitSounds.PlayShot();
 
             projectile = _projectileFactory.SpawnProjectile(_weaponTransform);
-
+           
             switch (_weaponClass.ActiveWeapon)
             {
                 case ProjectileType.Tear:

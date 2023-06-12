@@ -26,19 +26,14 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         _unit = GetComponent<BaseUnit>();
-        StartCoroutine(FOVRoutine());
     }
 
-    private IEnumerator FOVRoutine()
+    private void FixedUpdate()
     {
-        WaitForSeconds wait = new WaitForSeconds(_checkDelay);
-
-        while (_unit.IsAlive)
-        {
-            yield return wait;
+        if(_unit.IsAlive) 
             FieldOfViewCheck();
-        }
     }
+
 
     private void FieldOfViewCheck()
     {

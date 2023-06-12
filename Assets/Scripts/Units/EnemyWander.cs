@@ -16,14 +16,10 @@ public class EnemyWander : Enemy
     [SerializeField]
     private float _maxDistance = 1;
 
-    
-
-
     private void FixedUpdate()
     { 
         OnMove();
     }
-
     
 
     private void OnMove()
@@ -76,11 +72,12 @@ public class EnemyWander : Enemy
         while (true)
         {
             _distance = Vector3.Distance(_player.GetPlayersPos(), transform.position);
-
+            
             if (IsAlive)
             {
                 if (_distance <= _detectionDistance)
                 {
+                    
                     _navMeshAgent.destination = _cameraPoint.transform.position;
 
                     if (_canShot && _fieldOfView.CanSeePlayer)

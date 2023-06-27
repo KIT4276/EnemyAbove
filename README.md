@@ -1,7 +1,7 @@
 <h1 align="center">EnemyAbove</h1>
 <h3>simple Top Down shooter</h3>
-<h2>Videos gameplay link  </h2>
-<a href="URL">(https://drive.google.com/file/d/13IkHnFHg1TKvIj2tarc0Jf8zA3Xi5IhA/view?usp=drive_link)</a>
+<h2>Videos gameplay   
+<a href="https://drive.google.com/file/d/13IkHnFHg1TKvIj2tarc0Jf8zA3Xi5IhA/view?usp=drive_link">link</a> </h2>
 
 <br><p>В игре 4 уровня и локация между уровнями. Игрок перемещается по карте, убивая противников и захвачивая артефакты. При захвате артефакта перемещается на базу, где получает дополнительную информацию и возможность улучшить навыки за очки опыта. После этого игрок перемещается в следующую локацию.</p>
 
